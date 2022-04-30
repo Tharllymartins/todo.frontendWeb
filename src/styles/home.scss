@@ -1,0 +1,114 @@
+#page-auth{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    
+
+    main{
+        flex: 8;
+
+        padding: 0 32px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2{
+            font-weight: 400;
+            margin: 2px;
+            font-size: 20px;
+        }
+
+        h1, h2{
+            text-align: start;
+        }
+    }
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        align-items: stretch;
+        text-align: center;
+
+
+
+        form{
+            margin-top: 20px;
+            .input-text {
+                height: 50px;
+                border-radius: 8px;
+                padding: 0 16px;
+                background: #FFF;
+                border: 1px solid #a8a8b3;
+                margin: 5px;
+            }
+            button{
+
+                background: #0071FF;
+                height: 50px;
+                border-radius: 8px;
+                padding: 0 16px;
+                color: #FFF;
+                border: 1px solid #a8a8b3;
+                margin-top: 26px;
+            }
+            button, input {
+                width: 100%;
+            }
+            div{
+        
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                input{
+                    width: 30px;
+                    height: 20px;
+
+                }
+                strong{
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+                a{
+                    color: rgb(27, 65, 255);
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    aside{
+        flex: 7;
+        background: #d6e9ff;
+        color: black;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        padding: 120px 80px;
+
+        text-align: center;
+        height: 100vh;
+
+        
+        img {
+            max-width: 320px;
+        }
+
+        strong{
+            font: 700 36px 'Poppins', sans-serif;
+            line-height: 42px;
+            margin-top: 16px;
+        }
+        
+        p{
+            font-size: 24px;
+            line-height: 32px;
+            margin-top: 16px;
+            color: black;
+        }
+    }
+}
