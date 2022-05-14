@@ -1,13 +1,32 @@
 import React from 'react';
 import backgroundLogo from '../assets/images/background.svg';
 import '../styles/home.scss'
-
+import { FormEvent } from 'react';
+import { api } from '../service/api';
 import {Link, useNavigate} from 'react-router-dom'
-
-
+import axios from 'axios';
 
 
 function SignUp () {
+    const navigate = useNavigate();
+    
+    async function HandleCreateAccount (event: FormEvent) {
+        event.preventDefault()
+
+        
+
+        const name =  (document.getElementById('name_id') as HTMLInputElement).value;
+        const email =  (document.getElementById('email_id') as HTMLInputElement).value;
+        const password =  (document.getElementById('password_id') as HTMLInputElement).value;
+
+        await api.post('/users', {
+            name,
+            email,
+            password
+        }).then(() => navigate('/'))
+
+    }
+
     return(
         <div id='page-auth'>
             <main>
@@ -15,20 +34,26 @@ function SignUp () {
                     <h1>Seja bem vindo!</h1>
                     <h2>Registre-se abaixo.</h2>
 
-                    <form action="#">
+                    <form>
                     <input 
                         className='input-text'
                          type="text" 
-                        placeholder='name' />
+                        placeholder='Name' 
+                        id='name_id'
+                        />
 
                         <input
                         className='input-text'
                          type="text" 
-                        placeholder='Email' />
+                        placeholder='Email' 
+                        id='email_id'
+                        />
                         <input
                         className='input-text'
                          type="text" 
-                        placeholder='Password' />
+                        placeholder='Password' 
+                        id='password_id'
+                        />
                         <div>
                             <div className='inp-container'>
                             <input 
@@ -36,7 +61,8 @@ function SignUp () {
                             <strong>Lembra-se</strong>
                             </div>
                         </div>
-                        <button type='submit'>
+                        <button onClick={HandleCreateAccount}
+                        type='submit'>
                         Registre-se
                         </button>
                         <div className='text-container'> <strong>  Já possui uma conta?  Faça <Link to={'/'}> Login </Link>   agora!  </strong></div>
