@@ -5,7 +5,7 @@ import {HiOutlineMail} from 'react-icons/hi'
 import {Link, useNavigate} from 'react-router-dom'
 import { type } from '@testing-library/user-event/dist/type';
 import { api } from '../service/api';
-import AuthContext  from '../context/auth';
+import { AuthContext }  from '../context/auth';
 
 
 
@@ -14,8 +14,6 @@ function Account () {
     const navigate = useNavigate();
     const context = useContext(AuthContext);
 
-    console.log(context);
-
     async function HandleLogin (event: FormEvent){
         event.preventDefault();
 
@@ -23,10 +21,8 @@ function Account () {
         const email =  (document.getElementById('id_email') as HTMLInputElement).value;
         const password =  (document.getElementById('id_password') as HTMLInputElement).value;
 
-       await api.post('/session', {
-            email,
-            password
-        }).then((response) => navigate('/home') )
+        await context.Login({email, password}).then(() => navigate("/home"))
+
     }
 
     return(
