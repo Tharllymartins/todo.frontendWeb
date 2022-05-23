@@ -25,6 +25,10 @@ function Account () {
 
     }
 
+    if(context.userSession?.user) {
+        navigate("/home")
+    }
+
     return(
         <div id='page-auth'>
             <main>

@@ -1,0 +1,34 @@
+.card-task {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.img-card {
+    margin: 10px;
+}
+
+.count-task {
+    color: #0071FF;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    margin-right: 5px;
+    flex: 1;
+    justify-content: end;
+
+}
+
+body {
+    background-color: rgb(105, 105, 105);
+    font-family: 'Poppins';
+    font-style: normal;
+}

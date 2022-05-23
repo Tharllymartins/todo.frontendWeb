@@ -4,6 +4,7 @@ import SignUp  from './pages/NewAccount';
 import {Route, BrowserRouter, Routes } from 'react-router-dom'
 import Account from './pages/Account';
 import { AuthProvider } from './context/auth';
+import CardTask from './components/CardTask';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
        <Route path='/' element={<Account/>} />
         <Route path='/SignUp' element={<SignUp/> }/>
          <Route path='/home' element={<Home/> }/>
+         <Route path='/card' element={<CardTask />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
