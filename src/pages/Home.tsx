@@ -1,6 +1,6 @@
 import { ReactNode, useContext, useEffect, useState } from "react";
 import CardTask from "../components/CardTask";
-import { AuthContext, AuthProvider, AuthResponse } from "../context/auth";
+import { AuthContext } from "../context/auth";
 import { api } from "../service/api";
 import "../styles/resume-of-tasks.scss"
 
@@ -45,10 +45,6 @@ function Home () {
             <CardTask count={resume?.doing} title={"Doing"} />
             <CardTask count={resume?.done} title={"Done"} />
         </div>
-
-
-
-          
     );
 }
 

@@ -21,8 +21,9 @@ function Account () {
         const email =  (document.getElementById('id_email') as HTMLInputElement).value;
         const password =  (document.getElementById('id_password') as HTMLInputElement).value;
 
-        await context.Login({email, password}).then(() => navigate("/home"))
+        const logged = await context.Login({email, password})
 
+        Porque não import
     }
 
     // if(context.userSession?.user) {
@@ -39,13 +40,13 @@ function Account () {
                     <form >
                         <input
                         className='input-text'
-                         type="text" 
+                        type="text" 
                         placeholder='Email'
                         id='id_email'/>  
 
                         <input
                         className='input-text'
-                         type="text" 
+                        type="password" 
                         placeholder='Password' 
                         id='id_password'
                         />
@@ -53,7 +54,7 @@ function Account () {
                         <div>
                             <div className='inp-container'>
                             <input 
-                            type="radio" />
+                            type="checkbox" />
                             <strong>Lembra-se</strong>
                             </div>
                             <a>Esqueci minha senha</a>

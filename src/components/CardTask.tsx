@@ -23,6 +23,11 @@ function CardTask ( {count, title}: resume) {
     const storagedToken = localStorage.getItem('@App:token');
 
     const [tasks, setTasks] = useState<Task[]>([])
+    const [clicked, setClick] = useState<boolean>(false)
+
+    function handleCLick(){
+        setClick(!clicked);
+    }
 
 
     useEffect(() => {
@@ -35,7 +40,10 @@ function CardTask ( {count, title}: resume) {
 
 
     return(
-        <div className="card-task">
+        <div
+            onClick={handleCLick}
+            className={`card-task  ${clicked ? "clicked" : ""}`}
+        >
             <div className="img-card">
                 <span>
                     <img src={Pencil} alt="img" />
