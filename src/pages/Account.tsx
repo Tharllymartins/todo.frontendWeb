@@ -25,9 +25,9 @@ function Account () {
 
     }
 
-    if(context.userSession?.user) {
-        navigate("/home")
-    }
+    // if(context.userSession?.user) {
+    //     navigate("/home")
+    // }
 
     return(
         <div id='page-auth'>
@@ -67,7 +67,7 @@ function Account () {
             </main>
             <aside>
                 <img src={backgroundLogo} alt="Todo" />
-                <strong>Seu espaçod pessoal de anotações!</strong>
+                <strong>Seu espaço pessoal de anotações!</strong>
                 <p>Nunca mais esqueça suas tarefas, organize como desejar!</p>
             </aside>
         </div>

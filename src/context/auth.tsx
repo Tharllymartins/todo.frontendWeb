@@ -56,8 +56,6 @@ export function AuthProvider( { children }: AuthProviderProps ) {
     localStorage.setItem('@App:user', JSON.stringify(response.data))
     localStorage.setItem('@App:token', response.data.token)
 
-
-
   }
 
   return (

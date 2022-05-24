@@ -11,8 +11,13 @@ interface Task {
     status: string;
 }
 
+interface resume {
+    count: string | undefined;
+    title: string | undefined;
+}
+
  
-function CardTask () {
+function CardTask ( {count, title}: resume) {
     const context = useContext(AuthContext)
     const user  = context.userSession?.user
     const storagedToken = localStorage.getItem('@App:token');
@@ -38,11 +43,11 @@ function CardTask () {
             </div>
             <div className="content">
                 <h3 className="count-task">
-                    23
+                    {count}
                 </h3>
 
                 <span>
-                    <p className="task-name">Tarefas a fazer</p>
+                    <p className="task-name">{title}</p>
                 </span>
             </div>
         </div>

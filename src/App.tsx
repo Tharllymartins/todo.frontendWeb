@@ -16,7 +16,6 @@ function App() {
        <Route path='/' element={<Account/>} />
         <Route path='/SignUp' element={<SignUp/> }/>
          <Route path='/home' element={<Home/> }/>
-         <Route path='/card' element={<CardTask />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
