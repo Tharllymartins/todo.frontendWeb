@@ -1,6 +1,6 @@
 import React from 'react';
 import backgroundLogo from '../assets/images/background.svg';
-import '../styles/home.scss'
+import '../styles/login.scss'
 import { FormEvent } from 'react';
 import { api } from '../service/api';
 import {Link, useNavigate} from 'react-router-dom'

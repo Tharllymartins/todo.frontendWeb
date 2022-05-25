@@ -26,16 +26,16 @@ function Home () {
 
 
     return(
-        <div>
-            <ul>{tasks.map(task => (
-            <>
-                <li>{task.id}</li>
-                <li>{task.name}</li>
-                <li>{task.status}</li>
-            </>
-
-            
-            ))}</ul>
+        <div className="home-page">
+            <div className="nav-container">
+                <nav>
+                    <li>home</li>
+                    <li>home</li>
+                </nav>
+            </div>
+            <div className="main-container">
+                
+            </div>
         </div>
     );
 }

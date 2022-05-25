@@ -1,6 +1,6 @@
 import React, { FormEvent, useContext, useState } from 'react';
 import backgroundLogo from '../assets/images/background.svg';
-import '../styles/home.scss'
+import '../styles/login.scss'
 import {HiOutlineMail} from 'react-icons/hi'
 import {Link, useNavigate} from 'react-router-dom'
 import { type } from '@testing-library/user-event/dist/type';
