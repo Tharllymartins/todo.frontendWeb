@@ -5,6 +5,7 @@ import { api } from "../service/api";
 import "../styles/resume-of-tasks.scss"
 import ImgUser from '../assets/icons/me.svg'
 import CardTask from "../components/CardTask/CardTask"
+import "../styles/home.scss"
 
 interface Task {
     id: string;
@@ -68,7 +69,7 @@ function Home () {
                   </div>
                  </div>
 
-                 <div>
+                 <div className="list-tasks">
                     {tasks.map( (task) => 
                         <CardTask name={task.name} status={task.status} />
                     )}
