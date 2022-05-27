@@ -10,6 +10,7 @@ import "../styles/home.scss"
 interface Task {
     id: string;
     name: string;
+    created_at: string;
     status: string;
 }
 
@@ -39,6 +40,7 @@ function Home () {
             setTasks(response.data.tasks)
             setResume(response.data.resume)
         })
+        console.log(tasks);
     }, [] )
 
 
@@ -66,12 +68,19 @@ function Home () {
                    <FilterTask count={resume?.todo} title={"To do"} />
                    <FilterTask count={resume?.doing} title={"Doing"} />
                    <FilterTask count={resume?.done} title={"Done"} />
+                   <FilterTask count={resume?.done} title={"Done"} />
                   </div>
+                 </div>
+
+                 <div className="container-02">
+                     <h4>Minhas Tarefas</h4>
+                     <button>+ Nova Tarefa</button>
+                    
                  </div>
 
                  <div className="list-tasks">
                     {tasks.map( (task) => 
-                        <CardTask name={task.name} status={task.status} />
+                        <CardTask key={task.id} name={task.name} data={task.created_at} status={task.status}  />
                     )}
                 </div>
             </div>
@@ -93,4 +102,6 @@ function Home () {
 }
 
 export default Home;
+
+
 

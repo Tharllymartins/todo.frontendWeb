@@ -58,19 +58,21 @@
         .resume-tasks{
         display: flex;
         }
-             .container-02{
-                button{
-                    background: #0071FF;
-                    border: none;
-                    width: 170px;
-                    border-radius: 10px;
-                    color: white;
-                    margin-left: 20px ;
-                }
-                div{
-                    display: flex;
-                }
-               
+
+        }
+        .container-02{
+            display: flex;
+            margin: 24px;
+            h4{
+                font-size: 30px;
+            }
+            button{
+                background: #0071FF;
+                border: none;
+                width: 170px;
+                border-radius: 10px;
+                color: white;
+                margin-left: 20px ;
             }
         }
 
