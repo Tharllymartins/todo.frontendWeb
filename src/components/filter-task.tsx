@@ -17,7 +17,7 @@ interface resume {
 }
 
  
-function CardTask ( {count, title}: resume) {
+function FilterTask ( {count, title}: resume) {
     const context = useContext(AuthContext)
     const user  = context.userSession?.user
     const storagedToken = localStorage.getItem('@App:token');
@@ -62,5 +62,5 @@ function CardTask ( {count, title}: resume) {
     );
 }
 
-export default CardTask;
+export default FilterTask;
 

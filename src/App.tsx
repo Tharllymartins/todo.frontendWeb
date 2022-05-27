@@ -4,7 +4,7 @@ import SignUp  from './pages/NewAccount';
 import {Route, BrowserRouter, Routes } from 'react-router-dom'
 import Account from './pages/Account';
 import { AuthProvider } from './context/auth';
-import CardTask from './components/CardTask';
+import CardTask from './components/filter-task';
 
 
 function App() {

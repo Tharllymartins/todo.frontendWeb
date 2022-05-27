@@ -1,9 +1,10 @@
 import {  useContext, useEffect, useState } from "react";
-import CardTask from "../components/CardTask";
+import FilterTask from "../components/filter-task";
 import { AuthContext } from "../context/auth";
 import { api } from "../service/api";
 import "../styles/resume-of-tasks.scss"
 import ImgUser from '../assets/icons/me.svg'
+import CardTask from "../components/CardTask/CardTask"
 
 interface Task {
     id: string;
@@ -61,12 +62,17 @@ function Home () {
                  <h1>Seja Bem vindo, <span>{user?.name}</span>!</h1>
 
                   <div className="resume-tasks">
-                   <CardTask count={resume?.todo} title={"To do"} />
-                   <CardTask count={resume?.doing} title={"Doing"} />
-                   <CardTask count={resume?.done} title={"Done"} />
-       
+                   <FilterTask count={resume?.todo} title={"To do"} />
+                   <FilterTask count={resume?.doing} title={"Doing"} />
+                   <FilterTask count={resume?.done} title={"Done"} />
                   </div>
                  </div>
+
+                 <div>
+                    {tasks.map( (task) => 
+                        <CardTask name={task.name} status={task.status} />
+                    )}
+                </div>
             </div>
 
             <div className="calender">
@@ -77,12 +83,11 @@ function Home () {
                      <h4>{user?.name}</h4>
                      <p>Plano free</p>
                      </div>
-
                     </div>
                 </div>
             </div>
-
         </div>
+        
     );
 }
 
