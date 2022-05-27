@@ -1,3 +1,4 @@
+
 import React, { createContext, ReactNode, useEffect, useState } from 'react';
 import { api } from '../service/api';
 
@@ -55,8 +56,6 @@ export function AuthProvider( { children }: AuthProviderProps ) {
 
     localStorage.setItem('@App:user', JSON.stringify(response.data))
     localStorage.setItem('@App:token', response.data.token)
-
-
 
   }
 

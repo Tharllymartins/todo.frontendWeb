@@ -1,0 +1,33 @@
+.card-task {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.clicked {
+    border: solid 2px #0071FF;
+}
+
+.img-card {
+    margin: 10px;
+}
+
+.count-task {
+    font-size: 30px;
+    color: #0071FF;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    margin-right: 5px;
+    flex: 1;
+    justify-content: end;
+}

@@ -1,0 +1,129 @@
+.page-task{
+    display: flex;
+
+    aside{
+        height: 100vh;
+        width: 10% ;
+        background-color: white;
+        nav{
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            justify-content: center;
+            padding: 98px 0px 0px 0px;
+            margin-top: 20px;
+
+            li{
+                display: flex;
+                margin: 5px 0 5px 5px;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 600;
+                    
+                }
+            }
+            .active{
+                border-right: 3px solid #0071FF;
+            }
+        }
+    }
+
+    .main-container{
+        width:80%;
+        display: flex;
+        flex-direction: column;
+        background-color: #e0ecfa;
+
+        input{
+            height: 63px;
+            border: none;
+            padding: 20px;
+            background-color: #e0ecfa;
+            border-bottom: 1px solid #a4a4a4 ;
+        }
+
+        .container-01{
+            flex-direction: column;
+            padding: 40px;
+
+            h1{
+                span{
+                    color: #0071FF;
+                }
+            }
+            
+        .resume-tasks{
+        display: flex;
+        }
+             .container-02{
+                button{
+                    background: #0071FF;
+                    border: none;
+                    width: 170px;
+                    border-radius: 10px;
+                    color: white;
+                    margin-left: 20px ;
+                }
+                div{
+                    display: flex;
+                }
+               
+            }
+        }
+
+    }
+    .calender{
+        width: 15%;
+        padding: 10px;
+
+
+        .info-user{
+            p{
+                text-align: end;
+                font-weight: 300    ;
+            }
+            div{
+
+                display: flex;
+                justify-content: center;
+                .info-name{
+                    
+                    display: flex;
+                    flex-direction: column;
+                    text-align: start;
+                    p{
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+
+                    h4{
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                }
+
+
+                label{
+
+                    display: flex;
+                    align-items: center;
+                    background-color: #0071FF;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    justify-content: center;
+                    margin-right: 10px;
+                    img{
+
+                        height: 25px;
+                        width: 25px;
+                    }
+                }
+
+            }
+            
+        }
+    }
+
+}
