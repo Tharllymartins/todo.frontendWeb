@@ -1,4 +1,6 @@
 .card {
+
+
     display: flex;
     flex-direction: column;
     height: 107px;
@@ -8,7 +10,7 @@
     margin-left: 32px;
     margin-right: 16px;
     margin-bottom: 20px;
- 
+    cursor: pointer;
 
     .text-card{
         font-size: 12px;
@@ -57,4 +59,9 @@
         font-weight: 400;
     }
 
+
+}
+
+.clickedd {
+    background-color: #D5CAFB80;
 }

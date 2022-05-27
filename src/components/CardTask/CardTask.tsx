@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./CardStyle.scss"
 
 
@@ -10,10 +11,17 @@ interface Task {
 
 export default function CardTask({name, data, status}: Task): JSX.Element{
 
-
+    const [clicked, setClick] = useState<boolean>(false)
+    
+    function handleCLick(){
+        setClick(!clicked);
+    }
 
     return (
-        <div className="card">
+        <div 
+        onClick={handleCLick}
+        className={`card  ${clicked ? "clickedd" : ""}`}
+        >
             <div className="title-card">
                 <span>
                     {name}

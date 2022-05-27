@@ -7,11 +7,14 @@
     height: 150px;
     border-radius: 10px;
     margin-right: 42px;
+    cursor: pointer;
 }
 
 .clicked {
     border: solid 2px #0071FF;
+    box-shadow: 1px 1px 10px #0071FF;
 }
+
 
 .img-card {
     margin: 10px;

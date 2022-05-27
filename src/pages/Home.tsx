@@ -6,7 +6,7 @@ import "../styles/resume-of-tasks.scss"
 import ImgUser from '../assets/icons/me.svg'
 import CardTask from "../components/CardTask/CardTask"
 import "../styles/home.scss"
-
+import HomeIcon from "../assets/icons/home.svg"
 interface Task {
     id: string;
     name: string;
@@ -48,9 +48,9 @@ function Home () {
         <div className="page-task">
             <aside>
                 <nav>
-                    <li className="active"><a href="#" >Home</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li className="active"><a href="#" ><img src={HomeIcon}/>Home</a></li>
+                    <li><a href="#"><img src={HomeIcon}/>Dashboard</a></li>
+                    <li><a href="#"><img src={HomeIcon}/>Settings</a></li>
                 </nav>
             </aside>
 
