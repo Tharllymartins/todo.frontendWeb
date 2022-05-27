@@ -7,6 +7,8 @@ import ImgUser from '../assets/icons/me.svg'
 import CardTask from "../components/CardTask/CardTask"
 import "../styles/home.scss"
 import HomeIcon from "../assets/icons/home.svg"
+
+
 interface Task {
     id: string;
     name: string;
@@ -15,9 +17,10 @@ interface Task {
 }
 
 interface Resume {
-    todo: string;
-    doing: string;
-    done: string;
+    todo: number;
+    doing: number;
+    done: number;
+    total: number;
 }
 
  
@@ -68,7 +71,7 @@ function Home () {
                    <FilterTask count={resume?.todo} title={"To do"} />
                    <FilterTask count={resume?.doing} title={"Doing"} />
                    <FilterTask count={resume?.done} title={"Done"} />
-                   <FilterTask count={resume?.done} title={"Done"} />
+                   <FilterTask count={resume?.total} title={"Total"} />
                   </div>
                  </div>
 

@@ -12,7 +12,7 @@ interface Task {
 }
 
 interface resume {
-    count: string | undefined;
+    count: number | undefined;
     title: string | undefined;
 }
 
