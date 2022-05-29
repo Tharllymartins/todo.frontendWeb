@@ -1,9 +1,10 @@
-import React, { FormEvent, useContext, useState } from 'react';
+import React, { FormEvent, useContext, useEffect, useState } from 'react';
 import backgroundLogo from '../assets/images/background.svg';
 import '../styles/login.scss'
 import {Link, useNavigate} from 'react-router-dom'
 
 import { AuthContext }  from '../context/auth';
+import { api } from '../service/api';
 
 
 
@@ -20,13 +21,8 @@ function Account () {
         const password =  (document.getElementById('id_password') as HTMLInputElement).value;
 
         const logged = await context.Login({email, password})
-
-        
+        navigate("/home")
     }
-
-     if(context.userSession?.user) {
-         navigate("/home")
- }
 
     return(
         <div id='page-auth'>

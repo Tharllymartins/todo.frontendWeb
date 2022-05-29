@@ -31,7 +31,7 @@ function FilterTask ( {count, title}: resume) {
 
 
     useEffect(() => {
-        api.get("/todo", {
+        api.get("/task", {
             headers: {
                 'Authorization': `Bearer ${storagedToken}`
               },

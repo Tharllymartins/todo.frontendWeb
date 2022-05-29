@@ -35,7 +35,7 @@ function Home () {
 
 
     useEffect(() => {
-        api.get("/todo", {
+        api.get("/task", {
             headers: {
                 'Authorization': `Bearer ${storagedToken}`
               },

@@ -47,7 +47,7 @@ export function AuthProvider( { children }: AuthProviderProps ) {
 
   async function Login({email, password}: AuthRequest) {
 
-    const response = await api.post("/session", {
+    const response = await api.post("/user/auth", {
       email,
       password
     })
