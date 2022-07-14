@@ -28,22 +28,23 @@ function Home () {
     const context = useContext(AuthContext)
     const user  = context.userSession?.user
     const storagedToken = localStorage.getItem('@App:token');
-
+    console.log(user?.name)
 
     const [tasks, setTasks] = useState<Task[]>([])
-    const [resume, setResume] =useState<Resume>()
+    const [overView, setoverView] =useState<Resume>()
 
 
     useEffect(() => {
+        
         api.get("/task", {
             headers: {
                 'Authorization': `Bearer ${storagedToken}`
               },
         }).then(response => {
             setTasks(response.data.tasks)
-            setResume(response.data.resume)
+            setoverView(response.data.overView)
         })
-        console.log(tasks);
+        
     }, [] )
 
 
@@ -68,10 +69,10 @@ function Home () {
                  <h1>Seja Bem vindo, <span>{user?.name}</span>!</h1>
 
                   <div className="resume-tasks">
-                   <FilterTask count={resume?.todo} title={"To do"} />
-                   <FilterTask count={resume?.doing} title={"Doing"} />
-                   <FilterTask count={resume?.done} title={"Done"} />
-                   <FilterTask count={resume?.total} title={"Total"} />
+                   <FilterTask count={overView?.todo} title={"To do"} />
+                   <FilterTask count={overView?.doing} title={"Doing"} />
+                   <FilterTask count={overView?.done} title={"Done"} />
+                   <FilterTask count={overView?.total} title={"Total"} />
                   </div>
                  </div>
 

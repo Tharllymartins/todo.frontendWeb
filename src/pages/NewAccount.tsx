@@ -19,7 +19,7 @@ function SignUp () {
         const email =  (document.getElementById('email_id') as HTMLInputElement).value;
         const password =  (document.getElementById('password_id') as HTMLInputElement).value;
 
-        await api.post('/users/signup', {
+        await api.post('/user/signup', {
             name,
             email,
             password
